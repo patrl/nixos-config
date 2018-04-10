@@ -25,6 +25,20 @@
     firewall.allowedTCPPorts = [ 8000 ];
   };
 
-  services.xserver.videoDrivers = ["nvidia"];
+  services.xserver= {
+    videoDrivers = ["nvidia"];
+    windowManager.i3 = {
+      enable = true;
+      configFile = /home/minoulefou/.config/i3/config;
+    };
+  };
 
+  users.extraUsers.minoulefou = {
+      isNormalUser = true;
+      home = "/home/minoulefou";
+      extraGroups = [ "wheel" "audio" "video" "storage" "optical" "wireshark" ];
+      shell = pkgs.zsh;
+  };
+
+  system.stateVersion = "17.09"; # Did you read the comment?
 }
