@@ -29,6 +29,13 @@
  };
 
   services.xserver= {
+    libinput = {
+      enable = true;
+      disableWhileTyping = true;
+      scrollMethod = "twofinger";
+      tapping = true;
+    };
+
     windowManager.i3 = {
       enable = true;
       configFile = /home/ninjatrappeur/.config/i3/config;
