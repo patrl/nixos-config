@@ -40,5 +40,5 @@
       shell = pkgs.zsh;
   };
 
-  system.stateVersion = "17.09"; # Did you read the comment?
+  system.stateVersion = "18.09"; # Did you read the comment?
 }
