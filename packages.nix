@@ -4,7 +4,7 @@
     gnome3.corePackages ++ gnome3.optionalPackages ++ 
     [
        wget vim terminus_font groff
-       mpv pavucontrol git python36
+       mpv pavucontrol git python36 ffmpeg
        i3blocks i3status gnome3.gnome_terminal
        lm_sensors sysstat cmus acpi
        alsaUtils unzip p7zip unar less
@@ -17,8 +17,8 @@
        youtube-dl gimp inkscape shotwell
        clementine liferea neovim logkeys ntp
        libreoffice wxhexeditor calibre
-       firefox signal-desktop #tor-browser-bundle-bin
+       firefox signal-desktop tor-browser-bundle-bin
        fixedsys-excelsior obs-studio newsboat
-       lynx vimPlugins.vimproc
+       lynx vimPlugins.vimproc enhanced-ctorrent
     ];
 }
