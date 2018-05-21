@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, lib, pkgs, ... }:
 
 {
   imports =
@@ -8,11 +8,14 @@
     ];
 
   # Use the GRUB 2 boot loader.
-  boot.loader.grub = {
-    enable = true;
-    enableCryptodisk = true;
-    version = 2;
-    device = "/dev/sda";
+  boot = {
+    extraModulePackages = [ config.boot.kernelPackages.wireguard ];
+    loader.grub = {
+       enable = true;
+       enableCryptodisk = true;
+       version = 2;
+       device = "/dev/sda";
+    };
   };
 
   networking = {
@@ -21,12 +24,23 @@
     networkmanager.enable = true;
   };
 
+  networking.wireguard.interfaces.wg0 = {
+    privateKey = builtins.readFile ./wgprivatekey;
+    ips = ["192.168.3.3"];
+    peers = [{
+      endpoint = "alternativebit.fr:51820";
+      publicKey = "YLIeSCLTy4PP5CkTp84lb52XWcYcz7S0SHkl7q2JVVQ=";
+      allowedIPs = ["0.0.0.0/0"  "::/0"];
+      persistentKeepalive = 25;
+    }];
+  };
+
   users.extraUsers.ninjatrappeur= {
       isNormalUser = true;
       home = "/home/ninjatrappeur";
       extraGroups = [ "networkmanager" "wheel" "audio" "video" "storage" "optical" "wireshark" ];
       shell = pkgs.zsh;
- };
+  };
 
   services.xserver= {
     libinput = {
