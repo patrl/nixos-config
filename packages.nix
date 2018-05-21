@@ -6,12 +6,12 @@
        wget vim terminus_font groff
        mpv pavucontrol git python36 ffmpeg
        i3blocks i3status gnome3.gnome_terminal
-       lm_sensors sysstat cmus acpi
+       lm_sensors sysstat cmus acpi nixops
        alsaUtils unzip p7zip unar less
        xorg.fontadobe100dpi xorg.fontadobe75dpi 
        dbus grml-zsh-config wireshark
        gparted taskwarrior timewarrior tasksh 
-       transmission_gtk mutt-with-sidebar keepass ag htop
+       transmission_gtk mutt-with-sidebar keepassxc ag htop
        ntfs3g exfat exfat-utils chromium
        gnupg hlint udiskie cabal2nix syncthing
        youtube-dl gimp inkscape shotwell
