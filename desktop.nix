@@ -33,6 +33,11 @@
     };
   };
 
+  services.mysql = {
+    enable = true;
+    package = pkgs.mariadb;
+  };
+
   users.extraUsers.minoulefou = {
       isNormalUser = true;
       home = "/home/minoulefou";
