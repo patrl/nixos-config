@@ -19,6 +19,6 @@
        libreoffice wxhexeditor calibre
        firefox signal-desktop #tor-browser-bundle-bin
        fixedsys-excelsior obs-studio newsboat
-       lynx vimPlugins.vimproc
+       lynx vimPlugins.vimproc wireguard
     ];
 }
