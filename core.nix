@@ -35,6 +35,7 @@ in {
   # programs.bash.enableCompletion = true;
   # programs.mtr.enable = true;
   # programs.gnupg.agent = { enable = true; enableSSHSupport = true; };
+  services.syncthing.enable = true;
 
   services.xserver = {
     enable = true;

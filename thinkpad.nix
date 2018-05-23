@@ -42,6 +42,11 @@
       shell = pkgs.zsh;
   };
 
+  services.syncthing = {
+    user = "ninjatrappeur";
+    dataDir = "/home/ninjatrappeur/.config/syncthing";
+  };
+
   services.xserver= {
     libinput = {
       enable = true;
