@@ -5,6 +5,7 @@
     [
       ./core.nix
       ./desktop-hardware-configuration.nix
+      ./dev-services.nix
     ];
   # Use the GRUB 2 boot loader.
   boot.loader.grub = {
@@ -33,9 +34,9 @@
     };
   };
 
-  services.mysql = {
-    enable = true;
-    package = pkgs.mariadb;
+  services.syncthing = {
+    user = "minoulefou";
+    datadir = "/home/minoulefou/.config/syncthing";
   };
 
   users.extraUsers.minoulefou = {

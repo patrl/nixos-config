@@ -1,0 +1,1 @@
+/home/minoulefou/Code/perso/ofborg-project/ofborg/e2e-tests/testEnv.nix
