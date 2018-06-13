@@ -13,6 +13,16 @@ in {
     allowUnfree = true;
   };
 
+  networking.firewall.allowedTCPPorts = [ 
+    # Syncthing
+    22000 
+  ];
+
+  networking.firewall.allowedUDPPorts = [ 
+    # Syncthing
+    21027
+  ];
+
   hardware.pulseaudio.enable = true;
 
   i18n = {

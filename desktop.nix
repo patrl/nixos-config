@@ -36,7 +36,7 @@
 
   services.syncthing = {
     user = "minoulefou";
-    datadir = "/home/minoulefou/.config/syncthing";
+    dataDir = "/home/minoulefou/.config/syncthing";
   };
 
   users.extraUsers.minoulefou = {
