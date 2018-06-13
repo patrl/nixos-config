@@ -20,5 +20,6 @@
        firefox signal-desktop tor-browser-bundle-bin
        fixedsys-excelsior obs-studio newsboat
        lynx vimPlugins.vimproc wireguard
+       gitAndTools.gitFull
     ];
 }
