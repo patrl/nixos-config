@@ -23,7 +23,10 @@ in {
     21027
   ];
 
-  hardware.pulseaudio.enable = true;
+  hardware.pulseaudio = {
+    enable = true;
+    package = pkgs.pulseaudioFull;
+  };
 
   i18n = {
      consoleFont = "Lat2-Terminus16";

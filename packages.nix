@@ -11,7 +11,7 @@
        xorg.fontadobe100dpi xorg.fontadobe75dpi 
        dbus grml-zsh-config wireshark
        gparted taskwarrior timewarrior tasksh 
-       transmission_gtk mutt-with-sidebar keepassxc ag htop
+       transmission_gtk neomutt keepassxc ag htop
        ntfs3g exfat exfat-utils chromium
        gnupg hlint udiskie cabal2nix syncthing
        youtube-dl gimp inkscape shotwell
