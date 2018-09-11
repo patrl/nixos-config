@@ -20,6 +20,13 @@
        firefox signal-desktop tor-browser-bundle-bin
        fixedsys-excelsior obs-studio newsboat
        lynx vimPlugins.vimproc wireguard
-       gitAndTools.gitFull jq
+       gitAndTools.gitFull guitarix
+       jack2Full graphviz
+       #
+       # Extra Packages coming from the extra-pkgs overlay.
+       # (Haskell dev tools + random stuff missing from nixpkgs)
+       #
+       extra-pkgs.patchwork extra-pkgs.stylish-haskell
+       extra-pkgs.ghcid
     ];
 }

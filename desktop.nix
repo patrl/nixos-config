@@ -21,6 +21,9 @@
     '';
   };
 
+  # Jack stuff
+  boot.kernelModules = [ "snd-seq" "snd-rawmidi" ];
+
   networking = {
     hostName = "desktop-nix";
     firewall.allowedTCPPorts = [ 8000 ];
@@ -46,5 +49,11 @@
       shell = pkgs.zsh;
   };
 
+  services.mysql = {
+      package = pkgs.mariadb;
+      enable = true;
+  };
+
   system.stateVersion = "18.09"; # Did you read the comment?
+  nix.useSandbox = true;
 }

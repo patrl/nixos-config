@@ -2,7 +2,8 @@
 
 let 
   keys = import ./keys.nix;
-in {
+  extra-pkgs = import ./extra-pkgs/default.nix;
+in rec {
   imports =
     [ 
       ./packages.nix
@@ -13,6 +14,9 @@ in {
     allowUnfree = true;
   };
 
+  # Extra packages overlay
+
+  nixpkgs.overlays = [ extra-pkgs ];
   networking.firewall.allowedTCPPorts = [ 
     # Syncthing
     22000 
@@ -25,7 +29,7 @@ in {
 
   hardware.pulseaudio = {
     enable = true;
-    package = pkgs.pulseaudioFull;
+    package = pkgs.pulseaudioFull.override { jackaudioSupport = true; };
   };
 
   i18n = {
