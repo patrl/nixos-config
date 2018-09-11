@@ -39,7 +39,7 @@ let
   ];
 
 in stdenv.mkDerivation rec {
-  name = "Patchwork-${version}";
+  name = "patchwork-${version}";
   version = "3.10.1";
 
   src = fetchurl {
@@ -83,7 +83,7 @@ in stdenv.mkDerivation rec {
     cp ssb-patchwork.png $out/share/patchwork.png
     cp -r app/* $out/share/
     chmod a+x $out/share/ssb-patchwork
-    ln -s $out/share/ssb-patchwork $out/bin/patchwork
+    ln -s $out/share/ssb-patchwork $out/bin/ssb-patchwork
     ln -s ${desktopItem}/share/applicatinos/* $out/share/applications/
   '';
 
