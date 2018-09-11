@@ -26,7 +26,9 @@
        # Extra Packages coming from the extra-pkgs overlay.
        # (Haskell dev tools + random stuff missing from nixpkgs)
        #
+       # See ./extra-pkgs/default.nix for more informations.
+       #
        extra-pkgs.patchwork extra-pkgs.stylish-haskell
-       extra-pkgs.ghcid
+       extra-pkgs.ghcid extra-pkgs.weeder
     ];
 }

@@ -17,5 +17,6 @@ self: super:
     #
     stylish-haskell = self.haskellPackages.stylish-haskell;
     ghcid = self.haskellPackages.ghcid;
+    weeder = self.haskellPackages.weeder;
   };
 }
